@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stinga AI - Reel Completo</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base_styles.css">
+    <link rel="stylesheet" href="scene1_styles.css">
+    <link rel="stylesheet" href="scene2_styles.css">
+    <link rel="stylesheet" href="scene3_styles.css">
+    <link rel="stylesheet" href="scene4_styles.css">
+    <link rel="stylesheet" href="scene5_styles.css">
+    <link rel="stylesheet" href="transitions.css">
+</head>
+
+<body>
+
+    <!-- Flash element for transitions -->
+    <div class="transition-flash" id="transition-flash"></div>
+
+    <div class="video-container" id="main-container">
+
+        <!-- ==============================
+             ESCENA 1: EL PROBLEMA
+             ============================== -->
+        <div class="slide active" id="slide-1">
+            <div class="tech-grid grid-red"></div>
+            <div class="vignette"></div>
+
+            <div class="brand-mark">
+                <div class="brand-dot animate-pulse"></div>
+                <span class="brand-text">Stinga AI</span>
+            </div>
+
+            <div class="notification-stack shake-trigger">
+                <!-- Card 1 -->
+                <div class="notify-card card-1">
+                    <div class="phone-icon-box">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide">Hace 2 min</p>
+                        <p class="text-white font-bold text-sm">Llamada Perdida</p>
+                        <p class="text-gray-400 text-xs">(55) 1234-5678</p>
+                    </div>
+                    <div class="mini-wave">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="notify-card card-2">
+                    <div class="phone-icon-box">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide">Hace 1 min</p>
+                        <p class="text-white font-bold text-sm">Llamada Perdida</p>
+                        <p class="text-gray-400 text-xs">Cliente Nuevo</p>
+                    </div>
+                    <div class="mini-wave">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="notify-card card-3">
+                    <div class="phone-icon-box">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide">Ahora</p>
+                        <p class="text-white font-bold text-sm">Llamada Perdida</p>
+                        <p class="text-gray-400 text-xs">Cita Urgente</p>
+                    </div>
+                    <div class="mini-wave">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="impact-text-container">
+                <h1 class="main-title anim-title">¿OTRO CLIENTE <br><span class="text-red">PERDIDO?</span></h1>
+                <p class="subtitle anim-sub">Tu teléfono suena, <br> pero tú <span
+                        class="text-cyan font-bold">trabajas</span>.</p>
+            </div>
+
+            <div class="absolute bottom-4 opacity-50 text-xs animate-bounce w-full text-center">Toca para solución 👇
+            </div>
+        </div>
+
+
+        <!-- ==============================
+             ESCENA 2: LA SOLUCIÓN
+             ============================== -->
+        <!-- ==============================
+             ESCENA 2: CHAT + CALENDARIO (NUEVO)
+             ============================== -->
+        <!-- ==============================
+             ESCENA 2: LA SOLUCIÓN (AI CORE)
+             ============================== -->
+        <div class="slide" id="slide-2">
+            <div class="tech-grid grid-cyan opacity-10"></div>
+            <div class="vignette"></div>
+
+            <!-- Scene 2 Container -->
+            <div class="s2-container">
+
+                <!-- TÍTULO SUPERIOR -->
+                <div class="s2-title-section">
+                    <h1 class="s2-main-title">YO CONTESTO</h1>
+                    <h2 class="s2-sub-title">POR TI</h2>
+                </div>
+
+                <!-- AI CORE CENTER -->
+                <div class="s2-core-section">
+                    <!-- Pulse rings animados -->
+                    <div class="s2-pulse-ring"></div>
+                    <div class="s2-pulse-ring" style="animation-delay: 1s;"></div>
+                    <div class="s2-pulse-ring" style="animation-delay: 2s;"></div>
+
+                    <!-- Logo circular -->
+                    <div class="s2-logo-container">
+                        <img src="logostingai.jpg" class="s2-logo-img" alt="Stinga Logo">
+                    </div>
+
+                    <!-- Badge de estado -->
+                    <div class="s2-status-badge">
+                        <span class="s2-status-dot"></span>
+                        <span class="s2-status-text">IA Escuchando...</span>
+                    </div>
+                </div>
+
+                <!-- FOOTER CARD -->
+                <div class="s2-footer-card">
+                    <p class="s2-footer-title">Tu Recepcionista Virtual 24/7</p>
+                    <div class="s2-divider"></div>
+
+                    <!-- Capacidades -->
+                    <div class="s2-capabilities">
+                        <div class="s2-capability">
+                            <div class="s2-cap-icon s2-icon-phone">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="s2-cap-text">Respondo</span>
+                        </div>
+
+                        <div class="s2-capability">
+                            <div class="s2-cap-icon s2-icon-calendar">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="s2-cap-text">Agendo</span>
+                        </div>
+
+                        <div class="s2-capability">
+                            <div class="s2-cap-icon s2-icon-money">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z">
+                                    </path>
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="s2-cap-text">Vendo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==============================
+             ESCENA 3: DEMO (CHAT + CALENDARIO)
+             ============================== -->
+        <div class="slide" id="slide-3">
+            <div class="tech-grid grid-cyan opacity-10"></div>
+
+            <!-- SCENE 3: Demo en vivo -->
+            <div class="s3-demo-container">
+
+                <!-- PARTE SUPERIOR: Conversación de Audio -->
+                <div class="s3-top-section">
+                    <!-- Waveform que aparece -->
+                    <div class="s3-waveform" id="s3-waveform">
+                        <div class="s3-wave-bar"></div>
+                        <div class="s3-wave-bar"></div>
+                        <div class="s3-wave-bar"></div>
+                        <div class="s3-wave-bar"></div>
+                        <div class="s3-wave-bar"></div>
+                    </div>
+
+                    <!-- SUBTÍTULOS DE LA CONVERSACIÓN -->
+                    <div class="s3-subtitle-container" id="s3-subtitles">
+                        <div class="s3-speaker-badge" id="s3-speaker"></div>
+                        <p class="s3-subtitle-text" id="s3-subtitle-text"></p>
+                    </div>
+
+                    <!-- Badge de AI procesando -->
+                    <div class="s3-ai-badge" id="s3-ai-badge">
+                        <span class="s3-ai-dot"></span>
+                        <span class="s3-ai-text">IA Transcribiendo en vivo...</span>
+                    </div>
+                </div>
+
+                <!-- PARTE INFERIOR: Vista de Calendario -->
+                <div class="s3-calendar-section">
+                    <div class="s3-calendar-header">
+                        <h3 class="s3-calendar-title">Agenda del Día</h3>
+                        <span class="s3-calendar-date">Octubre 24</span>
+                    </div>
+
+                    <div class="s3-calendar-timeline">
+                        <!-- Evento existente -->
+                        <div class="s3-event-slot">
+                            <span class="s3-time">3:00 PM</span>
+                            <div class="s3-event s3-event-existing">
+                                <div class="s3-event-label">Almuerzo</div>
+                            </div>
+                        </div>
+
+                        <!-- Nuevo evento que aparece SOLO cuando se menciona -->
+                        <div class="s3-event-slot">
+                            <span class="s3-time">4:00 PM</span>
+                            <div class="s3-event s3-event-new s3-event-hidden" id="s3-new-event">
+                                <div class="s3-event-label">Corte Caballero</div>
+                                <div class="s3-event-client">Andrés</div>
+                            </div>
+                        </div>
+
+                        <div class="s3-event-slot">
+                            <span class="s3-time">5:00 PM</span>
+                            <div class="s3-event-empty"></div>
+                        </div>
+                    </div>
+
+                    <!-- Confirmation toast -->
+                    <div class="s3-toast s3-toast-hidden" id="s3-toast">
+                        <svg class="s3-toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Cita agendada exitosamente</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- ==============================
+             ESCENA 4: EL BENEFICIO (VERDE)
+             ============================== -->
+        <div class="slide" id="slide-4">
+            <div class="tech-grid grid-green"></div>
+
+            <h1 class="success-title success-title-anim">Tu Agenda <br><span class="text-green">Llena</span></h1>
+
+            <!-- Grid de estadísticas flotante -->
+            <div class="stat-grid">
+                <div class="stat-box stat-1">
+                    <p class="text-gray-400 text-xs font-bold uppercase">Citas Hoy</p>
+                    <p class="text-3xl font-bold text-white">12</p>
+                </div>
+                <div class="stat-box stat-2">
+                    <p class="text-gray-400 text-xs font-bold uppercase">Tiempo Ahorrado</p>
+                    <p class="text-3xl font-bold text-green-400">2h</p>
+                </div>
+            </div>
+
+            <!-- Notificaciones de éxito (Simulan ventas entrando) -->
+            <div class="success-card-stack">
+                <div class="success-notify success-1">
+                    <div class="flex items-center gap-3">
+                        <div class="check-circle"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg></div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Cita Agendada</p>
+                            <p class="text-green-200 text-xs">Carlos M. - 4:00 PM</p>
+                        </div>
+                    </div>
+                    <span class="text-green-300 font-bold text-sm">+$</span>
+                </div>
+
+                <div class="success-notify success-2">
+                    <div class="flex items-center gap-3">
+                        <div class="check-circle"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg></div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Cita Agendada</p>
+                            <p class="text-green-200 text-xs">Ana R. - 5:30 PM</p>
+                        </div>
+                    </div>
+                    <span class="text-green-300 font-bold text-sm">+$</span>
+                </div>
+
+                <div class="success-notify success-3">
+                    <div class="flex items-center gap-3">
+                        <div class="check-circle"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg></div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Cita Agendada</p>
+                            <p class="text-green-200 text-xs">Luis P. - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <span class="text-green-300 font-bold text-sm">+$</span>
+                </div>
+            </div>
+
+            <!-- Branding final discreto -->
+            <div class="absolute bottom-5 opacity-60 flex flex-col items-center">
+                <p class="text-[10px] text-green-400 tracking-[4px] uppercase font-bold mb-1">Powered by</p>
+                <span class="text-sm font-bold text-white">Stinga AI</span>
+            </div>
+        </div>
+
+        <!-- ==============================
+             ESCENA 5: CTA (CIERRE)
+             ============================== -->
+        <div class="slide" id="slide-5">
+            <div class="tech-grid grid-cyan opacity-10"></div>
+            <div class="vignette"></div>
+
+            <!-- Scene 5 Container -->
+            <div class="s5-container">
+
+                <!-- CTA Box Principal -->
+                <div class="s5-cta-box">
+                    <h2 class="s5-main-question">¿Listo para</h2>
+                    <h3 class="s5-highlight-word">Automatizar?</h3>
+
+                    <p class="s5-instruction">Comenta la palabra clave:</p>
+
+                    <!-- Mock comment input -->
+                    <div class="s5-comment-box">
+                        <div class="s5-typing-container">
+                            <span class="s5-typing-text">DEMO</span>
+                            <span class="s5-cursor"></span>
+                        </div>
+                        <div class="s5-send-button">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo Section -->
+                <div class="s5-logo-section">
+                    <div class="s5-logo-wrapper">
+                        <img src="logostingai.jpg" class="s5-logo-img" alt="Stinga Logo">
+                    </div>
+                    <div class="s5-brand-text">
+                        <p class="s5-brand-name">STINGA AI</p>
+                        <p class="s5-brand-tagline">Tu Asistente Virtual Inteligente</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('main-container');
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+
+            // ===== TRANSITION SYSTEM =====
+            let isTransitioning = false;
+            const flash = document.getElementById('transition-flash');
+
+            async function playTransition(fromIndex, toIndex) {
+                const fromSlide = slides[fromIndex];
+                const toSlide = slides[toIndex];
+
+                // Mark as transitioning
+                fromSlide.classList.add('transitioning-out');
+                toSlide.classList.add('transitioning-in');
+
+                // Execute transition based on scene pair
+                const transitionKey = `${fromIndex + 1}-${toIndex + 1}`;
+
+                switch (transitionKey) {
+                    case '1-2':
+                        await transition1to2();
+                        break;
+                    case '2-3':
+                        await transition2to3();
+                        break;
+                    case '3-4':
+                        await transition3to4();
+                        break;
+                    case '4-5':
+                        await transition4to5();
+                        break;
+                    default:
+                        // Simple fade for other transitions
+                        await new Promise(resolve => setTimeout(resolve, 600));
+                }
+
+                // Clean up classes
+                fromSlide.classList.remove('transitioning-out', 'active');
+                fromSlide.classList.add('prev');
+                toSlide.classList.remove('transitioning-in');
+                toSlide.classList.add('active');
+            }
+
+            async function transition1to2() {
+                // Horizontal slide
+                await new Promise(resolve => setTimeout(resolve, 800));
+            }
+
+            async function transition2to3() {
+                // Vertical wipe
+                await new Promise(resolve => setTimeout(resolve, 900));
+            }
+
+            async function transition3to4() {
+                // 3D flip
+                await new Promise(resolve => setTimeout(resolve, 800));
+            }
+
+            async function transition4to5() {
+                // Dramatic zoom
+                await new Promise(resolve => setTimeout(resolve, 900));
+            }
+
+            async function nextSlide() {
+                if (isTransitioning) return;
+
+                if (currentSlide < slides.length - 1) {
+                    isTransitioning = true;
+                    const fromIndex = currentSlide;
+                    const toIndex = currentSlide + 1;
+
+                    await playTransition(fromIndex, toIndex);
+                    currentSlide = toIndex;
+                    isTransitioning = false;
+                } else {
+                    // Loop opcional al inicio
+                    // isTransitioning = true;
+                    // slides.forEach(s => s.classList.remove('prev', 'active'));
+                    // await playTransition(currentSlide, 0);
+                    // currentSlide = 0;
+                    // isTransitioning = false;
+                }
+            }
+
+            container.addEventListener('click', nextSlide);
+
+            // ===== SCENE 3 DEMO CONTROLLER =====
+            const transcriptTimeline = [
+                { time: 0, speaker: 'eva', text: 'Barbería La Clásica, te atiende Eva. ¿En qué te puedo ayudar?' },
+                { time: 4000, speaker: 'andres', text: 'Hola, buenas tardes. Me gustaría agendar una cita para hoy.' },
+                { time: 7000, speaker: 'eva', text: '¿Para qué día y hora te gustaría venir?' },
+                { time: 11000, speaker: 'andres', text: 'Para hoy a las 4 de la tarde.' },
+                { time: 13000, speaker: 'eva', text: 'Perfecto. Déjame verificar si a las 4 está libre...' },
+                { time: 18000, speaker: 'eva', text: 'Bien, a las 4 está libre. ¿A nombre de quién pongo la cita?' },
+                { time: 25000, speaker: 'andres', text: 'Andrés.' },
+                { time: 26000, speaker: 'eva', text: '¿Y qué servicio te vamos a hacer?' },
+                { time: 28000, speaker: 'andres', text: 'Un corte, un corte normal.' },
+                { time: 31000, speaker: 'eva', text: 'Perfecto, entonces será un corte de caballero...' },
+                { time: 40000, speaker: 'andres', text: 'Sí, claro que sí, es 8109-2627.' },
+                { time: 45000, speaker: 'eva', text: 'Ok, para confirmar es 8109-2627, ¿correcto?' },
+                { time: 50000, speaker: 'andres', text: 'Así es.' },
+                { time: 51000, speaker: 'eva', text: 'Agendando cita para Andrés a las 4 de la tarde de hoy...', showEvent: true },
+                { time: 55000, speaker: 'eva', text: 'Ya quedó, Andrés. Tu cita está confirmada para hoy a las 4 PM.', showToast: true },
+                { time: 60000, speaker: 'eva', text: 'Te va a llegar un recordatorio una hora antes.' },
+                { time: 64000, speaker: 'andres', text: 'No, eso es todo. Gracias.' },
+                { time: 66000, speaker: 'eva', text: 'Gracias a ti por elegirnos. Que tengas un excelente día.' }
+            ];
+
+            let scene3Timeline = null;
+            let scene3Active = false;
+
+            function startScene3Demo() {
+                scene3Active = true;
+                const speakerBadge = document.getElementById('s3-speaker');
+                const subtitleText = document.getElementById('s3-subtitle-text');
+                const newEvent = document.getElementById('s3-new-event');
+                const toast = document.getElementById('s3-toast');
+
+                let currentIndex = 0;
+
+                function showNextSubtitle() {
+                    if (!scene3Active || currentIndex >= transcriptTimeline.length) return;
+
+                    const item = transcriptTimeline[currentIndex];
+
+                    // Update speaker badge
+                    speakerBadge.className = 's3-speaker-badge s3-speaker-' + item.speaker;
+                    speakerBadge.textContent = item.speaker === 'eva' ? 'Agente IA' : 'Cliente';
+
+                    // Update subtitle text
+                    subtitleText.textContent = item.text;
+
+                    // Show calendar event when mentioned
+                    if (item.showEvent && newEvent) {
+                        newEvent.classList.remove('s3-event-hidden');
+                        newEvent.classList.add('s3-event-visible');
+                    }
+
+                    // Show toast when confirmed
+                    if (item.showToast && toast) {
+                        toast.classList.remove('s3-toast-hidden');
+                        toast.classList.add('s3-toast-visible');
+                        // Hide toast after 3 seconds
+                        setTimeout(() => {
+                            if (scene3Active) {
+                                toast.classList.remove('s3-toast-visible');
+                                toast.classList.add('s3-toast-hidden');
+                            }
+                        }, 3000);
+                    }
+
+                    currentIndex++;
+                    if (currentIndex < transcriptTimeline.length) {
+                        const nextTime = transcriptTimeline[currentIndex].time - transcriptTimeline[currentIndex - 1].time;
+                        scene3Timeline = setTimeout(showNextSubtitle, nextTime);
+                    }
+                }
+
+                // Start the timeline
+                showNextSubtitle();
+            }
+
+            function stopScene3Demo() {
+                scene3Active = false;
+                if (scene3Timeline) {
+                    clearTimeout(scene3Timeline);
+                    scene3Timeline = null;
+                }
+
+                // Reset elements
+                const newEvent = document.getElementById('s3-new-event');
+                const toast = document.getElementById('s3-toast');
+                if (newEvent) {
+                    newEvent.classList.remove('s3-event-visible');
+                    newEvent.classList.add('s3-event-hidden');
+                }
+                if (toast) {
+                    toast.classList.remove('s3-toast-visible');
+                    toast.classList.add('s3-toast-hidden');
+                }
+            }
+
+            // Observer to detect Scene 3 activation
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.target.id === 'slide-3') {
+                        if (mutation.target.classList.contains('active')) {
+                            startScene3Demo();
+                        } else {
+                            stopScene3Demo();
+                        }
+                    }
+                });
+            });
+
+            slides.forEach(slide => {
+                observer.observe(slide, { attributes: true, attributeFilter: ['class'] });
+            });
+
+            // Navegación con Teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                    nextSlide();
+                }
+            });
+
+        }); // Cierre de DOMContentLoaded
+    </script>
+</body>
+
+</html>

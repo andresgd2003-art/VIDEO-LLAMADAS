@@ -1,0 +1,183 @@
+/* =========================================
+   TRANSICIONES LIMPIAS Y DISTINTIVAS
+   ========================================= */
+
+/* Base transition classes */
+.slide {
+    transition: none;
+}
+
+.slide.transitioning-out,
+.slide.transitioning-in {
+    pointer-events: none;
+}
+
+/* =========================================
+   TRANSICIÓN 1→2: SLIDE HORIZONTAL
+   Como cambiar de página
+   ========================================= */
+
+.slide#slide-1.transitioning-out {
+    animation: slideOutLeft 0.8s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.slide#slide-2.transitioning-in {
+    animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   TRANSICIÓN 2→3: WIPE VERTICAL
+   Como cortina descendiendo
+   ========================================= */
+
+.slide#slide-2.transitioning-out {
+    animation: wipeUp 0.9s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    transform-origin: bottom;
+}
+
+@keyframes wipeUp {
+    to {
+        transform: translateY(-100%) scaleY(0.8);
+        opacity: 0;
+    }
+}
+
+.slide#slide-3.transitioning-in {
+    animation: wipeDown 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+@keyframes wipeDown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   TRANSICIÓN 3→4: FLIP CARD
+   Como voltear una tarjeta
+   ========================================= */
+
+.slide#slide-3.transitioning-out {
+    animation: flipOut 0.8s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+    transform-origin: center;
+}
+
+@keyframes flipOut {
+    0% {
+        transform: rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateY(90deg) scale(0.95);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotateY(90deg) scale(0.9);
+        opacity: 0;
+    }
+}
+
+.slide#slide-4.transitioning-in {
+    animation: flipIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: rotateY(-90deg) scale(0.9);
+    opacity: 0;
+}
+
+@keyframes flipIn {
+    0% {
+        transform: rotateY(-90deg) scale(0.9);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotateY(0deg) scale(0.95);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   TRANSICIÓN 4→5: ZOOM CINEMATOGRÁFICO
+   Como acercar cámara dramáticamente
+   ========================================= */
+
+.slide#slide-4.transitioning-out {
+    animation: zoomOutDramatic 0.9s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards;
+}
+
+@keyframes zoomOutDramatic {
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+.slide#slide-5.transitioning-in {
+    animation: zoomInDramatic 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(10px);
+}
+
+@keyframes zoomInDramatic {
+    to {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+/* =========================================
+   UTILIDADES
+   ========================================= */
+
+/* Flash element (mantenido por compatibilidad) */
+.transition-flash {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 1) 0%, rgba(34, 211, 238, 0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Asegurar perspectiva para el flip 3D */
+.video-container {
+    perspective: 2000px;
+}
+
+.slide {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}

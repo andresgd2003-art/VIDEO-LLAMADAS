@@ -1,0 +1,341 @@
+/* =========================================
+   ESCENA 3: DEMO EN VIVO (REDISEÑO COMPLETO)
+   ========================================= */
+
+/* Container principal */
+.s3-demo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+/* ===== TOP SECTION: Audio + Chat ===== */
+.s3-top-section {
+    height: 45%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    position: relative;
+    border-bottom: 2px solid rgba(147, 51, 234, 0.3);
+}
+
+/* Waveform audio */
+.s3-waveform {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.slide.active .s3-waveform {
+    animation: fadeInScale 0.6s ease-out forwards 0.3s;
+}
+
+.s3-wave-bar {
+    width: 6px;
+    background: linear-gradient(to top, #9333ea, #c084fc);
+    border-radius: 99px;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+    animation: waveAnimation 1.2s ease-in-out infinite;
+}
+
+.s3-wave-bar:nth-child(1) {
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.s3-wave-bar:nth-child(2) {
+    height: 40px;
+    animation-delay: 0.15s;
+}
+
+.s3-wave-bar:nth-child(3) {
+    height: 55px;
+    animation-delay: 0.3s;
+}
+
+.s3-wave-bar:nth-child(4) {
+    height: 35px;
+    animation-delay: 0.45s;
+}
+
+.s3-wave-bar:nth-child(5) {
+    height: 25px;
+    animation-delay: 0.6s;
+}
+
+@keyframes waveAnimation {
+
+    0%,
+    100% {
+        transform: scaleY(0.5);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scaleY(1.3);
+        opacity: 1;
+    }
+}
+
+/* Subtitle Container (replaces message bubble) */
+.s3-subtitle-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px 28px;
+    max-width: 90%;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+
+.slide.active .s3-subtitle-container {
+    animation: slideUpFade 0.7s ease-out forwards 0.5s;
+}
+
+.s3-speaker-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 99px;
+    display: inline-block;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+}
+
+.s3-speaker-eva {
+    background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
+    color: white;
+}
+
+.s3-speaker-andres {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    color: white;
+}
+
+.s3-subtitle-text {
+    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* AI Badge */
+.s3-ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(147, 51, 234, 0.2);
+    border: 1px solid rgba(147, 51, 234, 0.4);
+    border-radius: 99px;
+    padding: 8px 18px;
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.slide.active .s3-ai-badge {
+    animation: fadeInScale 0.5s ease-out forwards 1.8s;
+}
+
+.s3-ai-dot {
+    width: 10px;
+    height: 10px;
+    background: #9333ea;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 8px #9333ea;
+    }
+
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px #9333ea;
+    }
+}
+
+.s3-ai-text {
+    color: #c084fc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== BOTTOM SECTION: Calendario ===== */
+.s3-calendar-section {
+    height: 55%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.s3-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.s3-calendar-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin: 0;
+}
+
+.s3-calendar-date {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+/* Timeline */
+.s3-calendar-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.s3-event-slot {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.s3-time {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #6b7280;
+    width: 70px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* Event Cards */
+.s3-event {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border-left: 4px solid;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s3-event-existing {
+    background: rgba(107, 114, 128, 0.15);
+    border-color: #9ca3af;
+}
+
+.s3-event-new {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    border-color: #9333ea;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.2);
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Hidden and visible states (controlled by JS) */
+.s3-event-hidden {
+    opacity: 0;
+    transform: scale(0.9) translateX(-20px);
+}
+
+.s3-event-visible {
+    opacity: 1 !important;
+    transform: scale(1) translateX(0) !important;
+}
+
+.s3-event-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2px;
+}
+
+.s3-event-client {
+    font-size: 0.8rem;
+    color: #7c3aed;
+    font-weight: 600;
+}
+
+.s3-event-empty {
+    flex: 1;
+    min-height: 50px;
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+}
+
+/* Toast notification (controlled by JS) */
+.s3-toast {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.6s ease-out;
+}
+
+.s3-toast-hidden {
+    opacity: 0;
+    transform: translate(-50%, 100px);
+}
+
+.s3-toast-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.s3-toast-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 3;
+}
+
+/* Utility Animations */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
